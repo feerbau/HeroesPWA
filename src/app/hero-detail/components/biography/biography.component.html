@@ -1,0 +1,52 @@
+<div>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBiography" aria-expanded="false" aria-controls="collapseBiography">
+            Biography
+        </button>
+    </p>
+
+    <div class="collapse" id="collapseBiography" style="border-radius: 16px; border: 1px solid;">
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col">
+                <p><b>Full name:</b> {{biography['full-name']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Birthplace:</b> {{biography['place-of-birth']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Alter Egos:</b> {{biography['alter-egos']}}</p>
+            </div>
+            <div class="col">
+                <p><b>First Appearance:</b> {{biography['first-appearance']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Alignment:</b> {{biography['alignment']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Publisher:</b> {{biography['publisher']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Aliases:</b></p>
+                <label *ngFor="let alias of biography['aliases']" style="padding: 10px; margin: 10px;">
+                    - {{alias}}.
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    p {
+        padding: 10px;
+    }
+    
+    span {
+        padding: 10px;
+    }
+</style>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Favorites</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card-columns">
+                <div class="card" *ngFor="let hero of heroes">
+                    <!-- <img [src]="hero.image['url']" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{hero.name}}</h5>
+                        <button class="btn btn-danger btn-sm" (click)="removeFromFavorites(hero._id)">
+                            <i class="bi bi-trash"></i>Remove from favourites
+                        </button>
+                        <button class="btn btn-info btn-sm">
+                            <a style="text-decoration: none; color: white;" [routerLink]="['/hero-detail', hero._id]">Details</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

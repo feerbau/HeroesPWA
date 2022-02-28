@@ -1,0 +1,44 @@
+<div>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppearance" aria-expanded="false" aria-controls="collapseAppearance">
+            Appearance
+        </button>
+    </p>
+
+    <div class="collapse" id="collapseAppearance" style="border-radius: 16px; border: 1px solid;">
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col">
+                <p><b>Gender:</b> {{appearance['gender']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Race:</b> {{appearance['race']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Eye color:</b> {{appearance['eye-color'] == "" ? '-' : appearance['eye-color']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Hair color:</b> {{appearance['hair-color'] == "" ? '-' : appearance['hair-color']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Weight:</b> {{appearance['weight'][1] == "0 kg" ? '-' : appearance['weight'][1]}}</p>
+            </div>
+            <div class="col">
+                <p><b>Height:</b> {{appearance['height'][1] == "0 cm" ? '-' : appearance['height'][1]}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    p {
+        padding: 10px;
+    }
+    
+    span {
+        padding: 10px;
+    }
+</style>

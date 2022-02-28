@@ -1,0 +1,43 @@
+<h1>{{hero ? 'Hero Detail - ' + hero.name : 'Hero Detail'}}</h1>
+
+<div class="container" *ngIf="ready == true">
+
+    <div class="row">
+        <div class="col">
+            <img [src]="hero.image['url']" style="width: 50%; height: 100%;" />
+        </div>
+        <div class="col-12">
+            <button class="btn btn-danger btn-sm" (click)="addToFavorites()" *ngIf="!isFavourite">
+                <i class="bi bi-star"></i>Add to favourites
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="removeFromFavorites()" *ngIf="isFavourite">
+                <i class="bi bi-trash"></i>Remove from favourites
+            </button>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary btn-sm" (click)="share()">
+                <i class="bi bi-share"></i>Share
+            </button>
+        </div>
+    </div>
+    <div class="details">
+
+        <h2>{{hero.name}}</h2>
+        <!-- <p>{{hero.description}}</p> -->
+        <p>
+            <b>Real Name:</b> {{hero.name}}
+        </p>
+
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col">
+                <appearance [appearance]="hero.appearance"></appearance>
+                <biography [biography]="hero.biography"></biography>
+                <powerstats [powerstats]="hero.powerstats"></powerstats>
+                <connections [connections]="hero.connections"></connections>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    <br>
+    <br>

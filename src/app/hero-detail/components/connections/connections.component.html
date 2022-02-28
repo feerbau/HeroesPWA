@@ -1,0 +1,31 @@
+<div>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConnections" aria-expanded="false" aria-controls="collapseConnections">
+            Connections
+        </button>
+    </p>
+
+    <div class="collapse" id="collapseConnections" style="border-radius: 16px; border: 1px solid;">
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col">
+                <p><b>Group Affiliation:</b> {{connections['group-affiliation']}}</p>
+            </div>
+
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Relatives:</b> {{connections['relatives']}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    p {
+        padding: 10px;
+    }
+    
+    span {
+        padding: 10px;
+    }
+</style>

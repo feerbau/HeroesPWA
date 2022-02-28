@@ -1,0 +1,44 @@
+<div>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePowerstats" aria-expanded="false" aria-controls="collapsePowerstats">
+            Powerstats
+        </button>
+    </p>
+
+    <div class="collapse" id="collapsePowerstats" style="border-radius: 16px; border: 1px solid;">
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col">
+                <p><b>Combat:</b> {{powerstats['combat']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Durability:</b> {{powerstats['durability']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Intelligence:</b> {{powerstats['intelligence']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Power:</b> {{powerstats['power']}}</p>
+            </div>
+        </div>
+        <div class="row row-cols-lg-auto">
+            <div class="col">
+                <p><b>Speed:</b> {{powerstats['speed']}}</p>
+            </div>
+            <div class="col">
+                <p><b>Strength:</b> {{powerstats['strength']}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    p {
+        padding: 10px;
+    }
+    
+    span {
+        padding: 10px;
+    }
+</style>
