@@ -2,6 +2,9 @@
 
 Project for the subject "Enfoque para el Desarrollo de Aplicaciones Móviles Multiplataforma"
 
+# Instalation
+Step inside the project folder and run `npm install` to install dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
