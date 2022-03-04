@@ -6,14 +6,14 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HomePage } from './home/home.page';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    // loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-    component: HomePage
-  },
+  // {
+  //   path: 'home',
+  //   // loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  //   component: HomePage
+  // },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'heroes',
     pathMatch: 'full'
   },
   {

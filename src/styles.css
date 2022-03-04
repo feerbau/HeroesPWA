@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "bootstrap-icons/font/bootstrap-icons.css";
+h1 {
+    padding: 4px;
+}
+
+nav {
+    margin: 5px;
+    display: block !important;
+    align-items: center;
+    text-align: center;
+}
