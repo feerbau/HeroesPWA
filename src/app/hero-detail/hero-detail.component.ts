@@ -4,6 +4,7 @@ import { Hero } from 'src/app/models/hero';
 import { HeroService } from 'src/app/services/heroesService.component';
 import { DatabaseService } from '../services/databaseService.component';
 
+
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'hero-detail',
@@ -44,16 +45,4 @@ export class HeroDetailComponent implements OnInit {
         this.isFavourite = false;
     }
 
-    share() {
-        if (navigator.share) {
-            let gender = this.hero.appearance['gender'] == 'male' ? 'His' : 'Her' ;
-            navigator.share({
-                title: 'Hero',
-                text: `Check out ${this.hero.name} on the Hero app! ${gender} race is ${this.hero.appearance['race']}. ${gender} combat power is ${this.hero.powerstats['combat']}`,
-                url: window.location.href,
-            })
-        } else {
-            alert(`Not supported !!`);
-        }
-    }
 }

@@ -15,9 +15,13 @@
             </button>
         </div>
         <div class="col-12">
-            <button class="btn btn-primary btn-sm" (click)="share()">
-                <i class="bi bi-share"></i>Share
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#shareModal" type="button">
+                 <i class="bi bi-share"></i>
+                    Share 
             </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button>
         </div>
     </div>
     <div class="details">
@@ -41,3 +45,38 @@
 
     <br>
     <br>
+
+    <!-- Modal -->
+    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalLabel">Share on social networks</h5>
+                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <button class="btn btn-sm" shareButton="facebook" description="Check out this hero!"> 
+                        <i class="bi bi-facebook"></i>Facebook
+                    </button> 
+                    No funciona en localhost-->
+                    <button class="btn btn-sm" shareButton="whatsapp" description="Check out this hero!">
+                        <i class="bi bi-whatsapp"></i> Whatsapp
+                    </button>
+                    <button class="btn btn-sm" shareButton="twitter" description="Check out this hero!">
+                        <i class="bi bi-twitter"></i> Twitter
+                    </button>
+
+                    <button class="btn btn-sm" shareButton="email" description="Check out this hero!">
+                        <i class="bi bi-envelope"></i> Email
+                    </button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

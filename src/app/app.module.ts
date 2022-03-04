@@ -14,6 +14,7 @@ import { BiographyComponent } from './hero-detail/components/biography/biography
 import { PowerstatsComponent } from './hero-detail/components/powerstats/powerstats.component';
 import { ConnectionsComponent } from './hero-detail/components/connections/connections.component';
 import { FavoritesPageModule } from './favorites/favorites.module';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FavoritesPageModule } from './favorites/favorites.module';
     }),
     HttpClientModule,
     FormsModule,
-    FavoritesPageModule
+    FavoritesPageModule,
+    ShareButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
